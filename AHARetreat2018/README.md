@@ -1,4 +1,4 @@
-<h1>Presentations from the June 2018 AHA Retreat in Asilomar</h1>
+<h1>Presentations from Asilomar Retreat, June 2018</h1>
 
 <pre>
 steveri-flow - CGRA Tool Flow, from Halide down to CGRA bitstream
