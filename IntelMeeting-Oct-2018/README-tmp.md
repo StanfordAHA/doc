@@ -7,7 +7,7 @@
 
 
 # Posters
-| Filename | Student Name | Poster Title	|
+| Student Name | Poster Title	| Filename |
 | ------------ | ------------ | ------------ |
 | Ankita Nayak, Alex Carsello	| Next-Gen CGRA Architecture |  NextGenCGRA.pdf |
 | Steven Herbst | Mixed Signal Emulation | MixedSignals.pdf |
