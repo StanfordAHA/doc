@@ -1,10 +1,10 @@
 # Talks
 | Name           | Title	             | Filename     |
 | ------------   | ------------              | ------------ |
-| Mark Horowitz  | Intro to Stanford Session | Horowitz-Intro.pdf,pptx |
-| Leonard Truong | Fault: A Python Framework for Agile Hardware Verification | Fault.pdf |
-| Alex Carsello  | Garnet - Next generation generator        | Magma-and-Garnet.pdf[1] |
-| Raj Setaluri   | Magma - Python embedded hardware language | Magma-and-Garnet.pdf[1] |
+| Mark Horowitz  | [Intro to Stanford Session](Horowitz-Intro.pdf) | Horowitz-Intro.pdf,pptx |
+| Leonard Truong | [Fault: A Python Framework for Agile Hardware Verification](Fault.pdf) | Fault.pdf |
+| Alex Carsello  | [Garnet - Next generation generator](Magma-and-Garnet.pdf)        | Magma-and-Garnet.pdf[1] |
+| Raj Setaluri   | [Magma - Python embedded hardware language](Magma-and-Garnet.pdf) | Magma-and-Garnet.pdf[1] |
 
 [1] Not yet uploaded.
 
@@ -12,8 +12,8 @@
 # Posters
 | Student Name                  | Poster Title	| Filename     |
 | ------------                  | ------------   | ------------ |
-| Ankita Nayak, Alex Carsello	| [Next-Gen CGRA Architecture](NextGenCGRA.pdf)            | NextGenCGRA.pdf  |
-| Steven Herbst                 | Mixed Signal Emulation                | MixedSignals.pdf |
+| Ankita Nayak, Alex Carsello	| [Next-Gen CGRA Architecture](NextGenCGRA-poster.pdf)            | NextGenCGRA-poster.pdf  |
+| Steven Herbst                 | [Mixed Signal Emulation](MixedSignals-poster.pdf)                | MixedSignals-poster.pdf |
 | Jeff Setter	                | Halide-to-CoreIR                      | H2H.pdf          |
 | Alex Carsello                 | Garnet - Next generation generator        | Magma-and-Garnet.pdf[2] |
 | Raj Setaluri                  | Magma - Python embedded hardware language | Magma-and-Garnet.pdf[2] |
