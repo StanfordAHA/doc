@@ -25,12 +25,12 @@
 | Nikhil Bhagdikar              | [Next-Gen PE Architecture](NextGenPE-poster.pdf) | NextGenPE-poster.pdf,pptx |
 | Keyi Zhang                    | [Kernel-Based Efficient Placement Algorithm for CGRA](Placement-poster.pdf)    | Placement-poster.pdf |
 | Dillon Huff	                | [Using Just-In-Time Compilation to Accelerate Simulations of Reconfigurable Architectures](JIT-poster.pdf) | JIT-poster.pdf&nbsp;[3] |
-| Ross Daly	                | [CoreIR: LLVM-Inspired Hardware Intermediate Representation](CoreIR-poster.pdf) | CoreIR-poster.pdf&nbsp;[3] |
+| Ross Daly	                | [CoreIR: LLVM-Inspired Hardware Intermediate Representation](CoreIR-poster.pdf) | CoreIR-poster.pdf |
 
 [1] Garnet and Magma talks got combined into one presentation.
 
 [2] No poster, see talk slides instead.
 
-[3] Not yet uploaded: Xuan/Joey, Dillon, Ross
+[3] Not yet uploaded: Xuan/Joey, Dillon
 
 
