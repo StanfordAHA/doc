@@ -4,7 +4,7 @@
 | Barrett, Fatahalian, Hanrahan, Horowitz, and Raina  | [Intro to Stanford Session](Horowitz-Intro.pdf) | Horowitz-Intro.pdf,pptx |
 | Leonard Truong | [Fault: A Python Framework for Agile Hardware Verification](Fault.pdf) | Fault.pdf |
 | Alex Carsello  | [Garnet - Next generation generator [1]](Garnet-and-Magma.pdf)        | Garnet-and-Magma.pdf |
-| Raj Setaluri   | [Magma - Python embedded hardware language [1]](Garnet-and-Magma.pdf) | Garnet-and-Magma.pdf |
+| Raj Setaluri   | [Magma - Python embedded hardware language&nbsp;[1]](Garnet-and-Magma.pdf) | Garnet-and-Magma.pdf |
 
 [1] Garnet and Magma talks got combined into one presentation.
 
