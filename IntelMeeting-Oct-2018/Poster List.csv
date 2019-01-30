@@ -27,7 +27,7 @@ Paul Rigge,Berkeley,Chisel DSP,,
 Paul Rigge,Berkeley,Teaching Chisel Generators in UCB EE290C,,
 Adam Izraelevitz,Berkeley,Chisel/FIRRTL Update,,
 Eric/Zhongkai,Berkeley,SerDes Generator with BAG,,
-Sagar Karandikar,Berkeley,FireSim Update,,<a href="https://sagark.org/assets/pubs/firesim-isca2018.pdf">ISCA'18 paper</a>
+Sagar Karandikar,Berkeley,FireSim Update,,<a href=https://sagark.org/assets/pubs/firesim-isca2018.pdf>ISCA'18 paper</a>
 Kevin Laeufer,Berkeley,RFUZZ: Coverage-Directed Fuzz Testing of RTL on FPGAs,,ICCAD'18 paper https://people.eecs.berkeley.edu/~ksen/papers/rfuzz.pdf
 Eric Chang,Berkeley,BAG3: AMS System Verification with Circuit Generators,,
 Woorham Bae/Zhaokai Liu,Berkeley,BAG ADC Generator,,
