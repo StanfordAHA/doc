@@ -22,7 +22,7 @@
 | David Durst                   | Aetherling: Resource-Aware, Space-Time Scheduling      | Aetherling.pdf |
 | Xuan Yang, Qiaoyi Liu         | Auto-scheduling Deep Neural Networks for Hardware      | DNN.pdf[1] |
 | Nikhil Bhagdikar              | Next-Gen PE Architecture | NextGenPE.pdf,pptx |
-| Keyi Zhang                    | Kernel-Based Efficient Placement Algorithm for CGRA    | Placement.pdf[1] |
+| Keyi Zhang                    | Kernel-Based Efficient Placement Algorithm for CGRA    | Placement.pdf |
 | Dillon Huff	                | Using Just-In-Time Compilation to Accelerate Simulations of Reconfigurable Architectures | JIT.pdf[1] |
 | Ross Daly	                | CoreIR: LLVM-Inspired Hardware Intermediate Representation | CoreIR.pdf[1] |
 
