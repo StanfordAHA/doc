@@ -6,6 +6,7 @@
 | Alex Carsello  | Garnet - Next generation generator        | Magma-and-Garnet.pdf[1] |
 | Raj Setaluri   | Magma - Python embedded hardware language | Magma-and-Garnet.pdf[1] |
 
+[1] Not yet uploaded.
 
 
 # Posters
