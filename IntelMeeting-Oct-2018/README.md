@@ -11,10 +11,7 @@
 # Posters
 | Student Name                  | Poster Title	| Filename     |
 | ------------                  | ------------   | ------------ |
-| Ankita Nayak, Alex Carsello	| [
-Next-Gen CGRA Architecture](
-NextGenCGRA.pdf
-)            | NextGenCGRA.pdf  |
+| Ankita Nayak, Alex Carsello	| Next-Gen CGRA Architecture            | NextGenCGRA.pdf  |
 | Steven Herbst                 | Mixed Signal Emulation                | MixedSignals.pdf |
 | Jeff Setter	                | Halide-to-CoreIR                      | H2H.pdf          |
 | Alex Carsello                 | Garnet - Next generation generator        | Magma-and-Garnet.pdf[2] |
