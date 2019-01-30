@@ -26,6 +26,6 @@
 | Dillon Huff	                | Using Just-In-Time Compilation to Accelerate Simulations of Reconfigurable Architectures | JIT.pdf[1] |
 | Ross Daly	                | CoreIR: LLVM-Inspired Hardware Intermediate Representation | CoreIR.pdf[1] |
 
-[1] Not yet uploaded.
+[1] Not yet uploaded: Xuan/Joey, Raj/Alex, Dillon, Ross
 
 [2] No poster, see talk slides instead.
