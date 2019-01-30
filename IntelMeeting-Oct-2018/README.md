@@ -21,7 +21,7 @@
 | Leonard Truong                | [Fault - Magma library for verification](Fault.pdf)    | Fault.pdf&nbsp;[2] |
 | Makai Mann, Cristian Mattarei, Aina Niemetz, Clark Barrett| [Verification/CoSA](CoSA-poster.pdf)          | CoSA-poster.pdf |
 | David Durst                   | [Aetherling: Resource-Aware, Space-Time Scheduling](Aetherling-poster.pdf)      | Aetherling-poster.pdf |
-| Xuan Yang, Qiaoyi Liu         | [Auto-scheduling Deep Neural Networks for Hardware](DNN-poster.pdf)      | DNN-poster.pdf&nbsp;[3] |
+| Xuan Yang, Qiaoyi Liu         | [Auto-scheduling Deep Neural Networks for Hardware](DNN-poster.pdf)      | DNN-poster.pdf |
 | Nikhil Bhagdikar              | [Next-Gen PE Architecture](NextGenPE-poster.pdf) | NextGenPE-poster.pdf,pptx |
 | Keyi Zhang                    | [Kernel-Based Efficient Placement Algorithm for CGRA](Placement-poster.pdf)    | Placement-poster.pdf |
 | Dillon Huff	                | [Using Just-In-Time Compilation to Accelerate Simulations of Reconfigurable Architectures](JIT-poster.pdf) | JIT-poster.pdf&nbsp;[3] |
@@ -31,6 +31,6 @@
 
 [2] No poster, see talk slides instead.
 
-[3] Not yet uploaded: Xuan/Joey, Dillon
+[3] Not yet uploaded: Dillon
 
 
