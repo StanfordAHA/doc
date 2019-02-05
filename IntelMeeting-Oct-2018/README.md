@@ -27,7 +27,7 @@
 | Dillon Huff&nbsp;[3]        | [Using Just-In-Time Compilation to Accelerate Simulations of Reconfigurable Architectures&nbsp;[3]](JIT-poster.pdf) | JIT-poster.pdf&nbsp;[3] |
 | Ross Daly	              | [CoreIR: LLVM-Inspired Hardware Intermediate Representation](CoreIR-poster.pdf) | CoreIR-poster.pdf |
 
-[1] Garnet and Magma talks got combined into one presentation.
+[1] Garnet and Magma talks share a single slide set.
 
 [2] No poster, see talk slides instead.
 
