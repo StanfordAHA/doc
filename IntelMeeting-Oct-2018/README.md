@@ -24,13 +24,11 @@
 | Xuan Yang, Qiaoyi Liu       | [Auto-scheduling Deep Neural Networks for Hardware](DNN-poster.pdf)          | DNN-poster.pdf |
 | Nikhil Bhagdikar            | [Next-Gen PE Architecture](NextGenPE-poster.pdf) | NextGenPE-poster.pdf,pptx |
 | Keyi Zhang                  | [Kernel-Based Efficient Placement Algorithm for CGRA](Placement-poster.pdf)    | Placement-poster.pdf |
-| Dillon Huff&nbsp;[3]        | [Using Just-In-Time Compilation to Accelerate Simulations of Reconfigurable Architectures&nbsp;[3]](JIT-poster.pdf) | JIT-poster.pdf&nbsp;[3] |
+| Dillon Huff                 | [Using Just-In-Time Compilation to Accelerate Simulations of Reconfigurable Architectures](JIT-poster.pdf) | JIT-poster.pdf, JIT-poster.pptx |
 | Ross Daly	              | [CoreIR: LLVM-Inspired Hardware Intermediate Representation](CoreIR-poster.pdf) | CoreIR-poster.pdf |
 
 [1] Garnet and Magma talks share a single slide set.
 
 [2] No poster, see talk slides instead.
-
-[3] Not yet uploaded: Dillon
 
 
