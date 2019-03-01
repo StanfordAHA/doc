@@ -64,8 +64,9 @@ to see status of Diablo tools. So long as this daily test passes, Diablo tool fl
 | Target applications for the CGRA        | https://github.com/StanfordAHA/Applications
 | **CoreIR** primitives                   | https://github.com/StanfordAHA/Primitives |
 
-[1] Note Whitney may soon undergo a name change, to **Lassen**
-[2] PNR repo will probably move to StanfordAHA at some point
+&nbsp;&nbsp;&nbsp;&nbsp; * [1] Note Whitney may soon undergo a name change, to **Lassen** *
+
+&nbsp;&nbsp;&nbsp;&nbsp; * [2] PNR repo will probably move to StanfordAHA at some point *
 
 
 
