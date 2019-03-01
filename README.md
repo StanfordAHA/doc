@@ -1,7 +1,7 @@
 # Docs
 Papers, Posters, Presentations, Documentation...
 
-# Glossary
+# AHA Projects Glossary
 
 ### Generation 1, Diablo
 * **Diablo**    - AHA first-generation CGRA, taped out May 2018
@@ -19,7 +19,7 @@ Papers, Posters, Presentations, Documentation...
 
 
 
-# Guide to resources
+# Guide to AHA Project Resources
 ### Generation 1: Genesis2 / Diablo
 
 * Diablo is our first-generation CGRA chip, which taped out successfully in May of 2018.
