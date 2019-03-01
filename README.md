@@ -1,4 +1,4 @@
-# Docs
+# AHA Docs
 Papers, Posters, Presentations, Documentation...
 
 # AHA Projects Glossary
