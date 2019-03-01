@@ -3,12 +3,13 @@ Papers, Posters, Presentations, Documentation...
 
 # Glossary
 
-Generation 1, Diablo
-* **Diablo** AHA first-generation CGRA, taped out May 2018
-* **Genesis2** A perl-based chip generator language, used by Diablo
-* **Pyroclast** Test board for Diablo
+### Generation 1, Diablo
+| :------------- | :---------------------------------------------------
+| **Diablo**     | AHA first-generation CGRA, taped out May 2018
+| **Genesis2**   | A perl-based chip generator language, used by Diablo
+| **Pyroclast**  | Test board for Diablo
 
-Generation 2, Lassen
+### Generation 2, Lassen
 * **Canal** Specification language for intertile routing, used by Garnet
 * **Garnet** Generator for Whitney/Lassen
 * **Lassen** New name for AHA second-generation CGRA
@@ -18,14 +19,12 @@ Generation 2, Lassen
 
 
 # Guide to resources
-
-## Generation 2: Magma / Lassen / Garnet
+### Generation 2: Magma / Lassen / Garnet
 
 **Lassen** is our second-generation CGRA, which is targeted to reside
 within an SoC that we call **Garnet**.
 
 
-| What                                    | Where                               |
 | :-------------------------------------- | :---------------------------------- |
 | **Garnet** next-gen CGRA generator      | https://github.com/StanfordAHA/garnet |
 | **Whitney**[1] CGRA processing element  | https://github.com/StanfordAHA/whitney
@@ -45,7 +44,7 @@ within an SoC that we call **Garnet**.
 
 
 
-## Generation 1: Genesis2 / Diablo
+### Generation 1: Genesis2 / Diablo
 
 Diablo is our first-generation CGRA chip, which taped out successfully in May of 2018.
 
@@ -53,7 +52,6 @@ Check here to see status of Diablo tools: https://travis-ci.org/StanfordAHA/CGRA
 So long as this daily test passes, Diablo tool flow is still viable.
 
 
-| What                                    | Where                               |
 | :-------------------------------------- | :---------------------------------- |
 | CGRA Flow examples and documentation    | https://github.com/StanfordAHA/CGRAFlowDoc
 | CGRA Generator (Genesis2->Verilog (v) ) | https://github.com/StanfordAHA/CGRAGenerator|
