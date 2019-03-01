@@ -18,21 +18,22 @@ Papers, Posters, Presentations, Documentation...
 
 ## Generation 1: Genesis2 / Diablo / Pyroclast
 
-If daily CGRAFlow test is passing, Diablo tool flow is still viable:
-https://travis-ci.org/StanfordAHA/CGRAFlow
+Diablo is our first-generation CGRA chip, which taped out successfully in May of 2018.
+
+Check here to see status of Diablo tools: https://travis-ci.org/StanfordAHA/CGRAFlow .
+So long as this daily test passes, Diablo tool flow is still viable.
 
 
 | What                                    | Where                               |
-| --------------------------------------- | ----------------------------------- |
-| CGRA Generation (Genesis2->Verilog (v) )| github.com/StanfordAHA/CGRAGenerator|
-| Halide front end (Halide->CoreIR)       | github.com/jeffsetter/Halide_CoreIR |
-| CoreIR mapper (CoreIR->CoreIR)          | github.com/StanfordAHA/CGRAMapper   |
-| PNR (CoreIR->bitstream (b) )            | github.com/Kuree/cgra_pnr           |
-| Testbench generator (b+v->output img)   | github.com/StanfordAHA/TestBenchGenerator |
-| --------------------------------------- | ----------------------------------- |
-| CoreIR helpers                          | github.com/rdaly525/coreir   |
-| CoreIR helpers                          | github.com/leonardt/pycoreir |
+| :-------------------------------------- | :---------------------------------- |
+| CGRA Generation (Genesis2->Verilog (v) )| https://github.com/StanfordAHA/CGRAGenerator|
+| Halide front end (Halide->CoreIR)       | https://github.com/jeffsetter/Halide_CoreIR |
+| CoreIR mapper (CoreIR->CoreIR)          | https://github.com/StanfordAHA/CGRAMapper   |
+| PNR (CoreIR->bitstream (b) )            | https://github.com/Kuree/cgra_pnr           |
+| Testbench generator (b+v->output img)   | https://github.com/StanfordAHA/TestBenchGenerator |
+| CoreIR helpers                          | https://github.com/rdaly525/coreir          |
+| CoreIR helpers                          | https://github.com/leonardt/pycoreir        |
 | Genesis2 generator framework            | https://github.com/StanfordVLSI/Genesis2 |
-| Python-compatible PE spec for validation| https://github.com/phanrahan/pe |
+| Python-compatible PE spec for validation| https://github.com/phanrahan/pe     |
 
 
