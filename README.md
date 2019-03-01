@@ -4,6 +4,8 @@ Papers, Posters, Presentations, Documentation...
 # Glossary
 
 ### Generation 1, Diablo
+
+| Term           | Definition
 | :------------- | :---------------------------------------------------
 | **Diablo**     | AHA first-generation CGRA, taped out May 2018
 | **Genesis2**   | A perl-based chip generator language, used by Diablo
@@ -25,6 +27,7 @@ Papers, Posters, Presentations, Documentation...
 within an SoC that we call **Garnet**.
 
 
+| What                                    | Where                               |
 | :-------------------------------------- | :---------------------------------- |
 | **Garnet** next-gen CGRA generator      | https://github.com/StanfordAHA/garnet |
 | **Whitney**[1] CGRA processing element  | https://github.com/StanfordAHA/whitney
@@ -52,6 +55,7 @@ Check here to see status of Diablo tools: https://travis-ci.org/StanfordAHA/CGRA
 So long as this daily test passes, Diablo tool flow is still viable.
 
 
+| What                                    | Where                               |
 | :-------------------------------------- | :---------------------------------- |
 | CGRA Flow examples and documentation    | https://github.com/StanfordAHA/CGRAFlowDoc
 | CGRA Generator (Genesis2->Verilog (v) ) | https://github.com/StanfordAHA/CGRAGenerator|
