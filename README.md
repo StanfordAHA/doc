@@ -50,7 +50,7 @@ to see status of Diablo tools. So long as this daily test passes, Diablo tool fl
 | What                                    | Where                               |
 | :-------------------------------------- | :---------------------------------- |
 | **Garnet** next-gen CGRA generator      | https://github.com/StanfordAHA/garnet |
-| **Whitney**[1] CGRA processing element  | https://github.com/StanfordAHA/whitney
+| **Whitney** CGRA processing element [1] | https://github.com/StanfordAHA/whitney
 | **Halide** front end (Halide->CoreIR)   | https://github.com/StanfordAHA/Halide-to-Hardware |
 | CoreIR mapper (CoreIR->CoreIR)          | https://github.com/StanfordAHA/CGRAMapper
 | PNR (CoreIR->bitstream (b) )            | https://github.com/Kuree/cgra_pnr        |
@@ -64,9 +64,9 @@ to see status of Diablo tools. So long as this daily test passes, Diablo tool fl
 | Target applications for the CGRA        | https://github.com/StanfordAHA/Applications
 | **CoreIR** primitives                   | https://github.com/StanfordAHA/Primitives |
 
-&nbsp;&nbsp;&nbsp;&nbsp; [1] <i>Note Whitney may soon undergo a name change, to **Lassen**</i>
+&nbsp;&nbsp;&nbsp;&nbsp; <i>[1] Note Whitney may soon undergo a name change, to **Lassen**</i>
 
-&nbsp;&nbsp;&nbsp;&nbsp; [2] <i>PNR repo will probably move to StanfordAHA at some point</i>
+&nbsp;&nbsp;&nbsp;&nbsp; <i>[2] PNR repo will probably move to StanfordAHA at some point</i>
 
 
 
