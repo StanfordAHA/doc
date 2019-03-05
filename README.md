@@ -4,20 +4,10 @@ Papers, Posters, Presentations, Documentation...
 # AHA Projects Glossary
 
 ### Generation 1, Diablo
-
-* [**Jade**](https://travis-ci.org/StanfordAHA/CGRAFlow)        
-- AHA first-generation CGRA, taped out May 2018
-
-* [**Diablo**](https://travis-ci.org/StanfordAHA/CGRAGenerator) 
-- Processing Element (PE) used in Jade
-
-* **Pyroclast**                                                 
-- Test board for Diablo
-
-* [**Genesis2**](https://github.com/StanfordVLSI/Genesis2)      
-- A perl-based chip generator language, used by Diablo
-
-
+* [**Jade**](https://travis-ci.org/StanfordAHA/CGRAFlow)        - AHA first-generation CGRA, taped out May 2018
+* [**Diablo**](https://travis-ci.org/StanfordAHA/CGRAGenerator) - Processing Element (PE) used in Jade
+* **Pyroclast**                                                 - Test board for Diablo
+* [**Genesis2**](https://github.com/StanfordVLSI/Genesis2)      - A perl-based chip generator language, used by Diablo
 
 ### Generation 2, Lassen
 * **Garnet**   - AHA second-generation CGRA
