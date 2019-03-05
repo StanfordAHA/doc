@@ -23,10 +23,35 @@ Papers, Posters, Presentations, Documentation...
 ### Generation 1: Jade / Diablo / Genesis2
 
 **Jade** is our first-generation CGRA chip, which taped out successfully in May of 2018.
-
-Check [this travis script](https://travis-ci.org/StanfordAHA/CGRAFlow) 
-for current status of the Jade tool flow. So long as this daily test passes, 
+[This travis script](https://travis-ci.org/StanfordAHA/CGRAFlow) 
+shows current status of the Jade tool flow. So long as this daily test passes, 
 the Jade tool flow is still viable.
+
+
+* [CGRA Flow examples and documentation    ](https://github.com/StanfordAHA/CGRAFlowDoc)
+* [CGRA Generator (Genesis2->Verilog (v) ) ](https://github.com/StanfordAHA/CGRAGenerator)
+* [Halide front end (Halide->CoreIR)       ](https://github.com/jeffsetter/Halide_CoreIR )
+* [CoreIR mapper (CoreIR->CoreIR)          ](https://github.com/StanfordAHA/CGRAMapper   )
+* [PNR (CoreIR->bitstream (b) )            ](https://github.com/Kuree/cgra_pnr           )
+* [Testbench generator (b+v->output img)   ](https://github.com/StanfordAHA/TestBenchGenerator )
+* [CoreIR helpers                          ](https://github.com/rdaly525/coreir          )
+* [CoreIR helpers                          ](https://github.com/leonardt/pycoreir        )
+* [**Genesis2** generator framework        ](https://github.com/StanfordVLSI/Genesis2 )
+* [Python-compatible PE spec for validation](https://github.com/phanrahan/pe     )
+* [**CoreIR** primitives                   ](https://github.com/StanfordAHA/Primitives )
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 | What                                    | Where                               |
