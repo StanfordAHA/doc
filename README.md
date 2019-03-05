@@ -24,7 +24,7 @@ Papers, Posters, Presentations, Documentation...
 
 * Diablo is our first-generation CGRA chip, which taped out successfully in May of 2018.
 
-* Check [here]https://travis-ci.org/StanfordAHA/CGRAFlow](here) (https://travis-ci.org/StanfordAHA/CGRAFlow)
+* Check [https://travis-ci.org/StanfordAHA/CGRAFlow](here) (https://travis-ci.org/StanfordAHA/CGRAFlow)
 to see status of Diablo tools. So long as this daily test passes, Diablo tool flow is still viable.
 
 
