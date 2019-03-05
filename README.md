@@ -11,7 +11,7 @@ Papers, Posters, Presentations, Documentation...
 
 ### Generation 2, Lassen
 * **Garnet**   - AHA second-generation CGRA
-* **Lassen**   - Processing Element (PE) AHA second-generation CGRA
+* **Lassen**   - PE used in Garnet
 * **Gemstone** - Chip generator infrastructure based on Magma
 * **Peak**     - Specification language for processing elements (CPUs)
 * **Canal**    - Specification language for intertile routing
@@ -19,15 +19,14 @@ Papers, Posters, Presentations, Documentation...
 * **Whitney**  - Old/original name for Lassen
 
 
-
 # Guide to AHA Project Resources
-### Generation 1: Genesis2 / Diablo
+### Generation 1: Jade / Diablo / Genesis2
 
-* Diablo is our first-generation CGRA chip, which taped out successfully in May of 2018.
+**Jade** is our first-generation CGRA chip, which taped out successfully in May of 2018.
 
-* Check [here](https://travis-ci.org/StanfordAHA/CGRAFlow) 
-to see status of Diablo tools. So long as this daily test passes, 
-Diablo tool flow is still viable.
+Check [this travis script](https://travis-ci.org/StanfordAHA/CGRAFlow) 
+for current status of the Jade tool flow. So long as this daily test passes, 
+the Jade tool flow is still viable.
 
 
 | What                                    | Where                               |
@@ -44,9 +43,9 @@ Diablo tool flow is still viable.
 | Python-compatible PE spec for validation| https://github.com/phanrahan/pe     |
 | **CoreIR** primitives                   | https://github.com/StanfordAHA/Primitives |
 
-### Generation 2: Magma / Lassen / Garnet
+### Generation 2: Garnet / Lassen / Gemstone
 
-* **Lassen** is our second-generation CGRA, which is targeted to reside within an SoC.
+* **Garnet** is our second-generation CGRA, which is targeted to reside within an SoC.
 
 
 | What                                    | Where                               |
