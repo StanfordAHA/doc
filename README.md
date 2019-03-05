@@ -10,13 +10,13 @@ Papers, Posters, Presentations, Documentation...
 * [**Genesis2**](https://github.com/StanfordVLSI/Genesis2)      - A perl-based chip generator language, used by Diablo
 
 ### Generation 2, Lassen
-* **Garnet**   - AHA second-generation CGRA
-* **Lassen**   - PE used in Garnet
-* **Gemstone** - Chip generator infrastructure based on Magma
-* **Peak**     - Specification language for processing elements (CPUs)
-* **Canal**    - Specification language for intertile routing
-* **Magma**    - A hardware design language embedded in python
-* **Whitney**  - Old/original name for Lassen
+* [**Garnet**](https://github.com/StanfordAHA/garnet)   - AHA second-generation CGRA
+* [**Lassen**](https://github.com/StanfordAHA/lassen)   - PE used in Garnet (also see <i>Whitney</i>
+* [**Whitney**](https://github.com/StanfordAHA/whitney) - Old/original name for Lassen
+* [**Gemstone**](https://github.com/rsetaluri/gemstone) - Chip generator infrastructure based on Magma
+* [**Peak**](https://github.com/phanrahan/peak)         - Specification language for processing elements (CPUs)
+* [**Canal**](https://github.com/rsetaluri/canal)       - Specification language for intertile routing
+* [**Magma**](https://github.com/phanrahan/magma)       - A hardware design language embedded in python
 
 
 # Guide to AHA Project Resources
