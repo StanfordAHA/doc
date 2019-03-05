@@ -50,7 +50,8 @@ the Jade tool flow is still viable.
 
 
 * [**Garnet** next-gen CGRA generator      ](https://github.com/StanfordAHA/garnet) **(StanfordAHA)**
-* [**Whitney** CGRA processing element     ](https://github.com/StanfordAHA/whitney) **(StanfordAHA)** [1]
+* [**Lassen** CGRA processing element      ](https://github.com/StanfordAHA/whitney) **(StanfordAHA)** [1]
+* [**Lassen** CGRA processing element      ](https://github.com/StanfordAHA/lassen) **(StanfordAHA)** [1]
 * [**Halide** front end (Halide->CoreIR)   ](https://github.com/StanfordAHA/Halide-to-Hardware) **(StanfordAHA)**
 * [CoreIR mapper (CoreIR->CoreIR)          ](https://github.com/StanfordAHA/CGRAMapper) **(StanfordAHA)**
 * [PNR (CoreIR->bitstream (b) )            ](https://github.com/Kuree/cgra_pnr) **(Kuree)**
@@ -64,39 +65,12 @@ the Jade tool flow is still viable.
 * [Target applications for the CGRA        ](https://github.com/StanfordAHA/Applications) **(StanfordAHA)**
 * [**CoreIR** primitives                   ](https://github.com/StanfordAHA/Primitives) **(StanfordAHA)**
 
-&nbsp;&nbsp;&nbsp;&nbsp; <i>[1] Note Whitney may soon undergo a name change, to **Lassen**</i>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<i>[1] Note **Lassen** used to be called **Whitney**; until the name
+change is complete, one of these links will be broken!
 
-&nbsp;&nbsp;&nbsp;&nbsp; <i>[2] PNR repo will probably move to StanfordAHA at some point</i>
-
-
-
-
-
-
-
-
-
-
-| What                                    | Where                               |
-| :-------------------------------------- | :---------------------------------- |
-| **Garnet** next-gen CGRA generator      | https://github.com/StanfordAHA/garnet |
-| **Whitney** CGRA processing element [1] | https://github.com/StanfordAHA/whitney
-| **Halide** front end (Halide->CoreIR)   | https://github.com/StanfordAHA/Halide-to-Hardware |
-| CoreIR mapper (CoreIR->CoreIR)          | https://github.com/StanfordAHA/CGRAMapper
-| PNR (CoreIR->bitstream (b) )            | https://github.com/Kuree/cgra_pnr        |
-| **Gemstone** hardware generator infrastructure | https://github.com/rsetaluri/gemstone |
-| **Magma** generator framework           | 
-| **Peak** DSL for CPU specification      | https://github.com/phanrahan/peak
-| **Canal** DSL for intertile routing [2] | https://github.com/rsetaluri/canal
-| **Thunder** placement engine            | https://github.com/Kuree/cgra_pnr           |
-| **Cyclone** routing engine              | https://github.com/Kuree/cgra_pnr           |
-| **Magmathon** for learning Magma        | https://github.com/phanrahan/magmathon/ |
-| Target applications for the CGRA        | https://github.com/StanfordAHA/Applications
-| **CoreIR** primitives                   | https://github.com/StanfordAHA/Primitives |
-
-&nbsp;&nbsp;&nbsp;&nbsp; <i>[1] Note Whitney may soon undergo a name change, to **Lassen**</i>
-
-&nbsp;&nbsp;&nbsp;&nbsp; <i>[2] PNR repo will probably move to StanfordAHA at some point</i>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<i>[2] PNR repo will probably move to StanfordAHA at some point</i>
 
 
 
