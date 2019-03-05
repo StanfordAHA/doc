@@ -65,10 +65,11 @@ the Jade tool flow is still viable.
 * [Target applications for the CGRA        ](https://github.com/StanfordAHA/Applications) **(StanfordAHA)**
 * [**CoreIR** primitives                   ](https://github.com/StanfordAHA/Primitives) **(StanfordAHA)**
 
+<b>Footnotes</b><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;
 <i>[1] Note **Lassen** used to be called **Whitney**; until the name
 change is complete, one of these links will be broken!
-
+<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;
 <i>[2] PNR repo will probably move to StanfordAHA at some point</i>
 
