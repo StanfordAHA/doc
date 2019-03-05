@@ -50,8 +50,8 @@ the Jade tool flow is still viable.
 
 
 * [**Garnet** next-gen CGRA generator      ](https://github.com/StanfordAHA/garnet) **(StanfordAHA)**
-* [**Lassen** CGRA processing element      ](https://github.com/StanfordAHA/whitney) **(StanfordAHA)** [1]
-* [**Lassen** CGRA processing element      ](https://github.com/StanfordAHA/lassen) **(StanfordAHA)** [1]
+* [**Lassen** CGRA processing element (old)](https://github.com/StanfordAHA/whitney) **(StanfordAHA)** [1]
+* [**Lassen** CGRA processing element (new)](https://github.com/StanfordAHA/lassen) **(StanfordAHA)** [1]
 * [**Halide** front end (Halide->CoreIR)   ](https://github.com/StanfordAHA/Halide-to-Hardware) **(StanfordAHA)**
 * [CoreIR mapper (CoreIR->CoreIR)          ](https://github.com/StanfordAHA/CGRAMapper) **(StanfordAHA)**
 * [PNR (CoreIR->bitstream (b) )            ](https://github.com/Kuree/cgra_pnr) **(Kuree)**
