@@ -4,18 +4,19 @@ Papers, Posters, Presentations, Documentation...
 # AHA Projects Glossary
 
 ### Generation 1, Diablo
-* **Diablo**    - AHA first-generation CGRA, taped out May 2018
-* **Genesis2**  - A perl-based chip generator language, used by Diablo
+* **Jade**      - AHA first-generation CGRA, taped out May 2018
+* **Diablo**    - Processing Element (PE) used in Jade
 * **Pyroclast** - Test board for Diablo
+* **Genesis2**  - A perl-based chip generator language, used by Diablo
 
 ### Generation 2, Lassen
-* **Canal**    - Specification language for intertile routing
-* **Garnet**   - Generator for Whitney/Lassen
+* **Garnet**   - AHA second-generation CGRA
+* **Lassen**   - Processing Element (PE) AHA second-generation CGRA
 * **Gemstone** - Chip generator infrastructure based on Magma
-* **Lassen**   - New name for AHA second-generation CGRA
-* **Magma**    - A hardware design language embedded in python
 * **Peak**     - Specification language for processing elements (CPUs)
-* **Whitney**  - Old name for AHA second-generation CGRA
+* **Canal**    - Specification language for intertile routing
+* **Magma**    - A hardware design language embedded in python
+* **Whitney**  - Old/original name for Lassen
 
 
 
