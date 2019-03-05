@@ -50,14 +50,14 @@ the Jade tool flow is still viable.
 
 
 * [**Garnet** next-gen CGRA generator      ](https://github.com/StanfordAHA/garnet) **(StanfordAHA)**
-* [**Whitney** CGRA processing element [1] ](https://github.com/StanfordAHA/whitney) **(StanfordAHA)**
+* [**Whitney** CGRA processing element     ](https://github.com/StanfordAHA/whitney) **(StanfordAHA)** [1]
 * [**Halide** front end (Halide->CoreIR)   ](https://github.com/StanfordAHA/Halide-to-Hardware) **(StanfordAHA)**
 * [CoreIR mapper (CoreIR->CoreIR)          ](https://github.com/StanfordAHA/CGRAMapper) **(StanfordAHA)**
 * [PNR (CoreIR->bitstream (b) )            ](https://github.com/Kuree/cgra_pnr) **(Kuree)**
 * [**Gemstone** hw generator infrastructure](https://github.com/rsetaluri/gemstone) **(rsetaluri)**
 * [**Magma** generator framework           ](https://github.com/phanrahan/magma) **(phanrahan)**
 * [**Peak** DSL for CPU specification      ](https://github.com/phanrahan/peak) **(phanrahan)**
-* [**Canal** DSL for intertile routing [2] ](https://github.com/rsetaluri/canal) **(rsetaluri)**
+* [**Canal** DSL for intertile routing     ](https://github.com/rsetaluri/canal) **(rsetaluri)** [2]
 * [**Thunder** placement engine            ](https://github.com/Kuree/cgra_pnr) **(Kuree)**
 * [**Cyclone** routing engine              ](https://github.com/Kuree/cgra_pnr) **(Kuree)**
 * [**Magmathon** for learning Magma        ](https://github.com/phanrahan/magmathon) **(phanrahan)**
