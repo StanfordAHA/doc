@@ -28,17 +28,17 @@ shows current status of the Jade tool flow. So long as this daily test passes,
 the Jade tool flow is still viable.
 
 
-* [CGRA Flow examples and documentation    ](https://github.com/StanfordAHA/CGRAFlowDoc) **repo:StanfordAHA**
-* [CGRA Generator (Genesis2->Verilog (v) ) ](https://github.com/StanfordAHA/CGRAGenerator) **repo:StanfordAHA**
-* [Halide front end (Halide->CoreIR)       ](https://github.com/jeffsetter/Halide_CoreIR ) **repo:jeffsetter**
-* [CoreIR mapper (CoreIR->CoreIR)          ](https://github.com/StanfordAHA/CGRAMapper   ) **repo:StanfordAHA**
-* [PNR (CoreIR->bitstream (b) )            ](https://github.com/Kuree/cgra_pnr           ) **repo:Kuree**
-* [Testbench generator (b+v->output img)   ](https://github.com/StanfordAHA/TestBenchGenerator ) **repo:StanfordAHA**
-* [CoreIR helpers                          ](https://github.com/rdaly525/coreir        ) **repo:rdaly**
-* [CoreIR helpers (pycoreir)               ](https://github.com/leonardt/pycoreir      ) **repo:leonart**
-* [**Genesis2** generator framework        ](https://github.com/StanfordVLSI/Genesis2  ) **repo:StanfordVLSI**
-* [Python-compatible PE spec for validation](https://github.com/phanrahan/pe           ) **repo:phanrahan**
-* [**CoreIR** primitives                   ](https://github.com/StanfordAHA/Primitives ) **repo:StanfordAHA**
+* [CGRA Flow examples and documentation    ](https://github.com/StanfordAHA/CGRAFlowDoc) **(StanfordAHA)**
+* [CGRA Generator (Genesis2->Verilog (v) ) ](https://github.com/StanfordAHA/CGRAGenerator) **(StanfordAHA)**
+* [Halide front end (Halide->CoreIR)       ](https://github.com/jeffsetter/Halide_CoreIR ) **(jeffsetter)**
+* [CoreIR mapper (CoreIR->CoreIR)          ](https://github.com/StanfordAHA/CGRAMapper   ) **(StanfordAHA)**
+* [PNR (CoreIR->bitstream (b) )            ](https://github.com/Kuree/cgra_pnr           ) **(Kuree)**
+* [Testbench generator (b+v->output img)   ](https://github.com/StanfordAHA/TestBenchGenerator ) **(StanfordAHA)**
+* [CoreIR helpers                          ](https://github.com/rdaly525/coreir        ) **(rdaly)**
+* [CoreIR helpers (pycoreir)               ](https://github.com/leonardt/pycoreir      ) **(leonart)**
+* [**Genesis2** generator framework        ](https://github.com/StanfordVLSI/Genesis2  ) **(StanfordVLSI)**
+* [Python-compatible PE spec for validation](https://github.com/phanrahan/pe           ) **(phanrahan)**
+* [**CoreIR** primitives                   ](https://github.com/StanfordAHA/Primitives ) **(StanfordAHA)**
 
 
 
