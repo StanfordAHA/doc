@@ -25,7 +25,8 @@ Papers, Posters, Presentations, Documentation...
 shows current status of the Jade tool flow. So long as this daily test passes, 
 the Jade tool flow is still viable.
 
-* [CGRA Flow examples and documentation    ](https://github.com/StanfordAHA/CGRAFlowDoc) **(StanfordAHA)**
+* [CGRA Flow end-to-end test of hw and sw  ](https://github.com/StanfordAHA/CGRAFlow)      **(StanfordAHA)**
+* [CGRA Flow examples and documentation    ](https://github.com/StanfordAHA/CGRAFlowDoc)   **(StanfordAHA)**
 * [CGRA Generator (Genesis2->Verilog (v) ) ](https://github.com/StanfordAHA/CGRAGenerator) **(StanfordAHA)**
 * [Halide front end (Halide->CoreIR)       ](https://github.com/jeffsetter/Halide_CoreIR ) **(jeffsetter)**
 * [CoreIR mapper (CoreIR->CoreIR)          ](https://github.com/StanfordAHA/CGRAMapper   ) **(StanfordAHA)**
