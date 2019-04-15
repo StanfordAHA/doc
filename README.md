@@ -42,7 +42,7 @@ the Jade tool flow is still viable.
 
 **Garnet** is our second-generation CGRA, which is targeted to reside within an SoC.
 
-Software flow
+**Software flow**
 * [**Halide** front end (Halide->CoreIR) ](https://github.com/StanfordAHA/Halide-to-Hardware) **(StanfordAHA)**
 * [Target applications for the CGRA      ](https://github.com/StanfordAHA/Applications) **(StanfordAHA)**
 * [**CoreIR** primitives                 ](https://github.com/StanfordAHA/Primitives)   **(StanfordAHA)**
@@ -51,14 +51,14 @@ Software flow
 * [**Thunder** placement engine          ](https://github.com/Kuree/cgra_pnr)  **(Kuree)**
 * [**Cyclone** routing engine            ](https://github.com/Kuree/cgra_pnr)  **(Kuree)**
 
-Harware flow
+**Harware flow**
 * [**Garnet** next-gen CGRA generator    ](https://github.com/StanfordAHA/garnet) **(StanfordAHA)**
 * [**Lassen** CGRA processing element    ](https://github.com/StanfordAHA/lassen) **(StanfordAHA)**
 * [**Gemstone** CGRA generator infrastructure](https://github.com/rsetaluri/gemstone) **(rsetaluri)**
 * [**Peak** DSL for CPU specification    ](https://github.com/phanrahan/peak)  **(phanrahan)**
 * [**Canal** DSL for intertile routing   ](https://github.com/rsetaluri/canal) **(rsetaluri)**
 
-Tools and testing
+**Tools and testing**
 * [**Magma** generator framework         ](https://github.com/phanrahan/magma) **(phanrahan)**
   * [**Magmathon** for learning Magma    ](https://github.com/phanrahan/magmathon) **(phanrahan)**
 * [**Fault** Python pkg for testing hw   ](https://github.com/leonardt/fault) **leaonardt**
