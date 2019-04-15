@@ -48,7 +48,7 @@ the Jade tool flow is still viable.
 * [PNR (CoreIR->bitstream (b))           ](https://github.com/Kuree/cgra_pnr) **(Kuree)**
 * [**Gemstone** CGRA generator infrastructure](https://github.com/rsetaluri/gemstone) **(rsetaluri)**
 * [**Magma** generator framework         ](https://github.com/phanrahan/magma) **(phanrahan)**
-** [**Magmathon** for learning Magma     ](https://github.com/phanrahan/magmathon) **(phanrahan)**
+  * [**Magmathon** for learning Magma     ](https://github.com/phanrahan/magmathon) **(phanrahan)**
 * [**Peak** DSL for CPU specification    ](https://github.com/phanrahan/peak) **(phanrahan)**
 * [**Canal** DSL for intertile routing   ](https://github.com/rsetaluri/canal) **(rsetaluri)** [1]
 * [**Thunder** placement engine          ](https://github.com/Kuree/cgra_pnr) **(Kuree)**
