@@ -61,8 +61,8 @@ the Jade tool flow is still viable.
 **Tools and testing**
 * [**Magma** generator framework         ](https://github.com/phanrahan/magma) **(phanrahan)**
   * [**Magmathon** for learning Magma    ](https://github.com/phanrahan/magmathon) **(phanrahan)**
-* [**Fault** Python pkg for testing hw   ](https://github.com/leonardt/fault) **leaonardt**
-  * [**Fault** tutorial                  ](https://github.com/leonardt/fault/tutorial) **leaonardt**
+* [**Fault** Python pkg for testing hw   ](https://github.com/leonardt/fault) **leonardt**
+  * [**Fault** tutorial                  ](https://github.com/leonardt/fault/tutorial) **leonardt**
 
 <b>Footnotes</b><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;
