@@ -16,6 +16,7 @@ Papers, Posters, Presentations, Documentation...
 * [**Peak**](https://github.com/phanrahan/peak)         - Specification language for processing elements (CPUs)
 * [**Canal**](https://github.com/rsetaluri/canal)       - Specification language for intertile routing
 * [**Magma**](https://github.com/phanrahan/magma)       - A hardware design language embedded in python
+* [**Fault**](https://github.com/leonardt/fault)        - A Python package for testing hardware (part of the magma ecosystem)
 
 # Guide to AHA Project Resources
 ### Generation 1: Jade / Diablo / Genesis2
