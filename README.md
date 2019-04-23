@@ -46,7 +46,8 @@ the Jade tool flow is still viable.
 **Software flow**
 * [Target applications for the CGRA      ](https://github.com/StanfordAHA/Applications) **(StanfordAHA)**
 * [**Halide** front end (Halide->CoreIR) ](https://github.com/StanfordAHA/Halide-to-Hardware) **(StanfordAHA)**
-* [CoreIR mapper (CoreIR->CoreIR)        ](https://github.com/StanfordAHA/CGRAMapper) **(StanfordAHA)**
+* ~[CoreIR mapper (CoreIR->CoreIR)        ](https://github.com/StanfordAHA/CGRAMapper) **(StanfordAHA)**~
+* [CoreIR mapper (CoreIR->CoreIR)        ](https://github.com/rdaly525/MetaMapper) **(rdaly)**
   * [**CoreIR** primitives                 ](https://github.com/StanfordAHA/Primitives)   **(StanfordAHA)**
 * [PNR (CoreIR->bitstream (b))           ](https://github.com/Kuree/cgra_pnr)   **(Kuree)** [1]
   * [**Thunder** placement engine          ](https://github.com/Kuree/cgra_pnr) **(Kuree)**
