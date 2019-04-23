@@ -44,7 +44,8 @@ the Jade tool flow is still viable.
 **Garnet** is our second-generation CGRA, which is targeted to reside within an SoC.
 
 **Software flow**
-* [Target applications for the CGRA      ](https://github.com/StanfordAHA/Applications) **(StanfordAHA)**
+* [Target applications for the CGRA      ](https://github.com/StanfordAHA/Applications) **(StanfordAHA/Applications)**
+* [Exhaustive apps list                  ](https://github.com/StanfordAHA/CGRAFlowDoc/blob/master/halide/application-list.md) **(StanfordAHA/CGRAFlowDoc)
 * [**Halide** front end (Halide->CoreIR) ](https://github.com/StanfordAHA/Halide-to-Hardware) **(StanfordAHA)**
 * ~[CoreIR mapper (CoreIR->CoreIR)        ](https://github.com/StanfordAHA/CGRAMapper) **(StanfordAHA)**~
 * [CoreIR mapper (CoreIR->CoreIR)        ](https://github.com/rdaly525/MetaMapper) **(rdaly)**
