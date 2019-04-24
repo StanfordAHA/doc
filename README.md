@@ -55,7 +55,7 @@ the Jade tool flow is still viable.
   * [**Cyclone** routing engine            ](https://github.com/Kuree/cgra_pnr) **(Kuree)**
 
 **Harware flow**
-* [**Gemstone** CGRA generator infrastructure](https://github.com/rsetaluri/gemstone) **(rsetaluri)**
+* [**Gemstone** CGRA generator infrastructure](https://github.com/StanfordAHA/gemstone) **(StanfordAHA)**
 * [**Garnet** next-gen CGRA generator    ](https://github.com/StanfordAHA/garnet) **(StanfordAHA)**
 * [**Lassen** CGRA processing element    ](https://github.com/StanfordAHA/lassen) **(StanfordAHA)**
 * [**Peak** DSL for CPU specification    ](https://github.com/phanrahan/peak)     **(phanrahan)**
