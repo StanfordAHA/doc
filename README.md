@@ -1,7 +1,7 @@
 # AHA Docs
 Papers, Posters, Presentations, Documentation...
 
-See [README_jade](README_jade) for information about our generation-1
+See [README_jade](README_jade.md) for information about our generation-1
 (Genesis2-based) CGRA chip **Jade.**
 
 **Garnet** is our second-generation (magma-based) CGRA, which is
