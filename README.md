@@ -7,7 +7,7 @@ See [README_jade](README_jade.md) for information about our generation-1
 **Garnet** is our second-generation (magma-based) CGRA, which is
 targeted to reside within an SoC.
 
-# Project Glossary - Garnet
+## Project Glossary - Garnet
 
 * [**Garnet**](https://github.com/StanfordAHA/garnet)   - AHA second-generation CGRA
 * [**Lassen**](https://github.com/StanfordAHA/lassen)   - PE used in Garnet
@@ -17,7 +17,7 @@ targeted to reside within an SoC.
 * [**Magma**](https://github.com/phanrahan/magma)       - A hardware design language embedded in python
 * [**Fault**](https://github.com/leonardt/fault)        - A Python package for testing hardware (part of the magma ecosystem)
 
-# Guide to Project Resources - Garnet / Lassen / Gemstone
+## Guide to Project Resources - Garnet / Lassen / Gemstone
 
 **Combined flow**
 * [End-to-end compile, build, run ](https://github.com/StanfordAHA/GarnetFlow) **(StanfordAHA/GarnetFlow)**
