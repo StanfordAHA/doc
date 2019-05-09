@@ -2,6 +2,7 @@
 
 Jade was out first-generation CGRA chip, which taped out in 2018.
 
+
 # Project Glossary - Jade
 
 * [**Jade**](https://travis-ci.org/StanfordAHA/CGRAFlow)        - AHA first-generation CGRA, taped out May 2018
@@ -9,8 +10,8 @@ Jade was out first-generation CGRA chip, which taped out in 2018.
 * **Pyroclast**                                                 - Test board for Diablo
 * [**Genesis2**](https://github.com/StanfordVLSI/Genesis2)      - A perl-based chip generator language, used by Diablo
 
+
 # Guide to Project Resources - Jade / Diablo Genesis2
-### Generation 1: Jade / Diablo / Genesis2
 
 **Jade** is our first-generation CGRA chip, which taped out successfully in May of 2018.
 [This travis script](https://travis-ci.org/StanfordAHA/CGRAFlow) 
