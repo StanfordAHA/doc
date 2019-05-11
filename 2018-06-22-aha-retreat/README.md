@@ -1,5 +1,6 @@
 # AHA Retreat
 Fri-Sat June 22-23, 2018
+
 Asilomar Conference Grounds, Pacific Grove, CA 
 
 ## Agenda
@@ -52,7 +53,7 @@ Saturday 6/23/18
 
 * [`StudentLightningTalks/lightning-talks`](StudentLightningTalks/lightning-talks.pdf) - Lightning talks by students
 
-## Tapeout session
+## Tapeout Session
 * [`TapeoutSession/nikhil-cgra-arch-and-physical-design`](TapeoutSession/nikhil-cgra-arch-and-physical-design.pdf) - Architecture review of the CGRA that was taped out and review of physical design flow
 * [`TapeoutSession/steveri-flow`](TapeoutSession/steveri-flow.pdf) - CGRA tool flow from Halide down to CGRA bitstream
 * [`TapeoutSession/steveri-virtual-tapeout2`](TapeoutSession/steveri-virtual-tapeout2.pdf) - Virtual tapeout discussion
