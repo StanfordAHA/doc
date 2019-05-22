@@ -3,6 +3,10 @@
 # For now, for markdown, just wrap everything in a "pre" tag
 echo "<pre>"
 
+# Date and URL should be here, e.g.
+# Fetched 22May2019 from https://travis-ci.com/StanfordAHA/garnet/builds/112832399
+egrep ^Fetched $1
+
 ##############################################################################
 # This grabs all the relevant info in sections
 # "test session starts", "warnings summary"

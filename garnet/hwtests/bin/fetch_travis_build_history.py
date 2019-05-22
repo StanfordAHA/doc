@@ -72,13 +72,19 @@ def main():
 
         # Chase it down and print it!
         # You know you have it all when it contains the phrase "build exited"
+        from datetime import date
         html = reload_until_pattern_found(browser, url, "build exited")
+        info = f'\n\nFetched {url} {date.today().strftime("%d-%B-%Y")}\n'
 
-        # Print final html to output file
-        print(f"Output to file '{OUTPUT_FILE}'")
-        file = open(OUTPUT_FILE, "w")
-        file.write(html)
-        file.close()
+        # Print final html to output file or stdout
+        if OUTPUT_FILE == "-":
+            print(html); print(info)
+        else:
+            print(f"Output to file '{OUTPUT_FILE}'")
+            file = open(OUTPUT_FILE, "w")
+            file.write(html)
+            file.write(info)
+            file.close()
 
     # Done!
     cleanup_and_exit(browser,display)

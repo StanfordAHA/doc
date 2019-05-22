@@ -1,5 +1,6 @@
 <pre>
-============== 27 passed, 1 skipped, 2 warnings in 221.49 seconds ==============
+Fetched https://travis-ci.com/StanfordAHA/garnet/builds/112832399 22-May-2019
+============== 27 passed, 1 skipped, 2 warnings in 220.63 seconds ==============
 
 ============================= test session starts ==============================
 
@@ -52,11 +53,11 @@ memory_core/memory_core_magma.py         91      2    98%   140, 143
 -------------------------------------------------------------------
 TOTAL                                   197      4    98%
 
-============== 27 passed, 1 skipped, 2 warnings in 221.49 seconds ==============
+============== 27 passed, 1 skipped, 2 warnings in 220.63 seconds ==============
 The command "docker exec -i garnet bash -c "/garnet/.travis/run.sh"" exited with 0.
 
 after_success
-0.91s$ docker exec -i garnet bash -c "cd /garnet/ &amp;&amp; coveralls"
+0.83s$ docker exec -i garnet bash -c "cd /garnet/ &amp;&amp; coveralls"
 INFO:coveralls:422
 INFO:coveralls:{"message":"Couldn't find a repository matching this job.","error":true}
 
