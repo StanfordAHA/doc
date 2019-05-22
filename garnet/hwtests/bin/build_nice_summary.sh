@@ -22,8 +22,20 @@ sed 's/<\/a>/<\/a>\n/g' $1 \
 egrep 'passed.*skipped.*warnings' /tmp/ptcleanup1.$$
 echo ""
 
-# Pretty it up and print it
+# Don't want detailed FAILURE info
 cat /tmp/ptcleanup1.$$ \
+  | awk '
+BEGIN          { noprint = 0}
+/= FAILURES =/ { noprint = 1}
+/= warnings /  { noprint = 0}
+noprint == 0   { print      }
+' > /tmp/ptcleanup2.$$
+
+# exit
+
+
+# Pretty it up and print it
+cat /tmp/ptcleanup2.$$ \
   | egrep -v '^(platform|cachedir|rootdir|plugins|collecting)' \
   | sed 's/^tests.test_//' \
   | sed 's|^[^/]*/test_||' \
