@@ -1,0 +1,161 @@
+Install in StanforAHA/doc/garnet/hwtests/ for now at least...
+
+
+
+fetch_garnet.py StanfordAHA/garnet master
+Most recent build for branch 'master': /StanfordAHA/garnet/builds/112517637
+
+https://travis-ci.com/StanfordAHA/garnet/builds
+https://travis-ci.com/StanfordAHA/garnet/builds/112517637
+https://api.travis-ci.com/v3/job/201654926/log.txt
+https://api.travis-ci.com/v3/job/201384714/log.txt
+------------------------------------------------------------------------
+Five tests (so far) to find: memory, garnet, lassen, pd, and soc.
+
+* garnet/memory: memory_core_db branch
+  https://github.com/StanfordAHA/garnet/tree/memory_core_db/tests/test_memory_core
+
+* garnet/{top,gb,gc,interconnect}, try:
+  curl -u steveri https://travis-ci.com/StanfordAHA/garnet |& less
+
+------------------------------------------------------------------------------
+I found archive of builds of travis ci in the following link:
+  https://s3.amazonaws.com/archive.travis-ci.org/jobs/6073028/log.txt
+or
+  https://api.travis-ci.org/v3/job/6073028/log.txt
+  https://api.travis-ci.org/v3/job/201384714/log.txt
+
+Just replace the number of your job id
+  Build id: 112386759
+  Job id: 201384714
+------------------------------------------------------------------------------
+
+
+
+
+
+
+
+------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+------------------------------------------------------------------------
+fb.log0:Most recent build for branch 'master': /StanfordAHA/garnet/builds/112517637
+https://travis-ci.com/StanfordAHA/garnet/builds/112517637
+https://api.travis-ci.com/v3/job/201654926/log.txt
+
+you're supposed to use WAITS
+https://selenium-python.readthedocs.io/waits.html#waits
+
+
+DONE
+- build fetch_travis_build StanfordAHA/garnet master
+
+==============================================================================
+1905 SELENIUM NOTES
+
+Selenium links
+  http://scraping.pro/use-headless-firefox-scraping-linux/
+  https://selenium-python.readthedocs.io/navigating.html
+  https://selenium-python.readthedocs.io/installation.html
+
+------------------------------------------------------------------------------
+from selenium.webdriver.common.keys import Keys
+
+elem = find_element_by_name("our_element")
+elem.send_keys("bar")
+elem.send_keys(Keys.CONTROL, 'a') #highlight all in box
+elem.send_keys(Keys.CONTROL, 'c') #copy
+elem.send_keys(Keys.CONTROL, 'v') #paste
+
+INSTALL
+  sudo apt-get install xvfb
+  sudo pip install pyvirtualdisplay
+
+SAMPLE SCRAPER
+  from pyvirtualdisplay import Display
+  from selenium import webdriver
+
+  display = Display(visible=0, size=(800, 600))
+  display.start()
+
+  browser = webdriver.Firefox()
+  browser.get('http://www.google.com')
+  print browser.title
+  browser.quit()
+
+  display.stop()
+
+INSTALL latest gecko driver
+  rnum=24
+  mozilla=https://github.com/mozilla/geckodriver/releases/download
+  wget $mozilla/v0.$rnum.0/geckodriver-v0.$rnum.0-linux64.tar.gz
+  tar -xvzf geckodriver*gz
+  /bin/rm geckodriver*gz
+
+==============================================================================
+# MAIL thread archives 1905
+# ------------------------------------------------------------------------------
+# On Wednesday, May 15, 2019, 11:17:22 AM PDT, Maxwell Bradley Strange
+# <mstrange@stanford.edu> wrote:
+# 
+# I actually refactored into a different branch - the tests for the memory core are in
+# memory_core_db under tests/test_memory_core/test_memory_core.py
+# 
+# 
+# From: Priyanka Raina <praina@stanford.edu>
+# Date: Wednesday, May 15, 2019 at 10:46 AM
+# To: Stephen E Richardson <steveri@stanford.edu>
+#  
+# Here are some of the locations of unit tests:
+# 
+# - garnet/tests - This has top level, global buffer, global controller,
+#   and interconnect test. For memory, this has the old tests, the new
+#   tests are in memory_core_impl branch which will be hopefully merged soon.
+# 
+# - lassen/tests - This has the PE tests. I am not sure if lassen tests
+#   are run again in garnet once the PE is instantiated.
+# 
+# - Ankita is integrating the power domain tests, she would know where
+#   they are.
+# 
+# - James has SoC tests in the repo on the arm/tsmc machine. It might be
+#   okay to extract the test log for the dashboard.
+# 
+# Thanks, Priyanka
+#  
+# 
+# On Wed, May 15, 2019 at 8:46 AM Stephen Richardson <steveri@stanford.edu> wrote:
+# 
+#     Below is my summary / liberal interpretation of Priyanka's
+#     test-related action items from previous mail. Have there been any
+#     updates on these? Also: should we add these to our goals list(s)
+#     in https://github.com/StanfordAHA/Private/blob/master/goals ?
+#     And/or can we discuss at today's meeting?
+# 
+#     ...
+# 
+#     3. build a dashboard, similar to Jeff's spreadsheet, for hardware
+#        unit tests, perhaps auto-generated from pytest logs
+# 
+#     * [is there someone in the hardware group that can take this on?
+#       And/or I can help with the scripts that generate the table, if
+#       someone can point me to the various tests that currently run...?]
+# 
+#     Steve
+
+
+==============================================================================
+OLD windows NOT USED 1905
+# window_before = driver.window_handles[0]
+# after clicking the link store the window handle of newly opened window as
+# window_after = driver.window_handles[1]
+# then execute the switch to window methow to move to newly opened window
+# driver.switch_to_window(window_after)
+
