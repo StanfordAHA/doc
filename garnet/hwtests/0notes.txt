@@ -1,3 +1,11 @@
+Current location: AHADocs/garnet/hwtests
+New location: GarnetFlow/test_summaries
+
+
+
+
+
+==============================================================================
 Install in StanforAHA/doc/garnet/hwtests/ for now at least...
 
 

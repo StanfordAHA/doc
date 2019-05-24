@@ -1,3 +1,11 @@
+Test summaries:
+
+
+
+
+
+
+<pre>
 To build garnet test summary:
 
   mkdir tmp
@@ -15,6 +23,7 @@ These work so far (v0):
 
 
 TODO
+- move tests to new location...
 - better summary for lassen
 - mem: garnet memory_core_db branch
 - pd: ?
@@ -31,3 +40,4 @@ DONE 1905
 - garnet v0
 - lassen v0
 - memory v0
+</pre>
