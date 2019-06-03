@@ -11,7 +11,7 @@ Friday, May 31
 |----------|---------
 | 4:00 pm  | Lodging check-in starts
 | 5:00     | Overview Talk -- Mark Horowitz
-| 5:30     | Overview Talk -- Priyanka Raina
+| 5:30     | [Overview Talk -- Priyanka Raina](overview-priyanka.pptx)
 | 6:00     | Dinner
 | 7:30     | Fire / music at Sunset Music Series
 
