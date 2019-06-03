@@ -2,7 +2,7 @@
 * Possibility of creating FPGA backends for CoreIR (Xilinx)
 
 # Magma
-* How do you optimize the *debug time* (most important) (Nafea)
+* How do you optimize the **debug time** (most important) (Nafea)
 * How do you give feedback on long timing paths, power etc? For example, how to map results from static timing analysis back to lines of code in magma? (Apple, Brucek)
 * Want to use magma and passes for an internal project (Brucek)
 
