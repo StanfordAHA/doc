@@ -1,0 +1,22 @@
+https://aha.stanford.edu/research/applications
+- new image and vision applications
+-- 3dconv.png
+- halide-to-hardware
+-- aha-toolchain.png
+
+https://aha.stanford.edu/research/cgra-architecture-and-tools
+- DSLs.png and/or
+- sst.png
+
+https://aha.stanford.edu/research/system-chip-soc
+- garnet-soc-block-diagram.png OR
+- cgra-on-soc.png
+
+https://aha.stanford.edu/research/creating-better-hardware-generation-tools
+- coreir and magma
+-- magma-coreir.png or
+-- magma-coreir-black.png
+- gemstone
+-- staged-generator.png
+
+I didn't find anything for "improved validation" (yet)
