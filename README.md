@@ -4,12 +4,12 @@ Papers, Posters, Presentations, Documentation...
 See [README_jade](README_jade.md) for information about our generation-1
 (Genesis2-based) CGRA chip **Jade.**
 
-**Garnet** is our second-generation (magma-based) CGRA, which is
+**Garnet** is teh SoC containing our second-generation (magma-based) CGRA, which is
 targeted to reside within an SoC.
 
 ## Project Glossary - Garnet
 
-* [**Garnet**](https://github.com/StanfordAHA/garnet)   - AHA second-generation CGRA
+* [**Garnet**](https://github.com/StanfordAHA/garnet)   - AHA SoC containing second-generation CGRA
 * [**Lassen**](https://github.com/StanfordAHA/lassen)   - PE used in Garnet
 * [**Gemstone**](https://github.com/rsetaluri/gemstone) - Chip generator infrastructure based on Magma
 * [**Peak**](https://github.com/phanrahan/peak)         - Specification language for processing elements (CPUs)
