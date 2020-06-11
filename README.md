@@ -4,7 +4,7 @@ Papers, Posters, Presentations, Documentation...
 See [README_jade](README_jade.md) for information about our generation-1
 (Genesis2-based) CGRA chip **Jade.**
 
-**Garnet** is teh SoC containing our second-generation (magma-based) CGRA, which is
+**Garnet** is the SoC containing our second-generation (magma-based) CGRA, which is
 targeted to reside within an SoC.
 
 ## Project Glossary - Garnet
