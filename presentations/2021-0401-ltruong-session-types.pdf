@@ -1,0 +1,357 @@
+<!--
+marp: true
+title: Session Types for Hardware
+paginate: true
+_paginate: true
+style: |
+  h1 {
+      color: #8c1515;
+  }
+  a {
+      color: #007c92;
+  }
+-->
+
+<!-- Title
+Avoiding Late Stage Design Bugs using Session Types to Specify Abstract Component Interfaces
+-->
+<!-- Abstract
+Many features such as testing (BIST), power domains, and redundancy are added late in the design process.  Bugs can result from unexpected interactions between these features.  Since these features are inserted at the gate level, finding bugs requires running expensive gate level simulations.  In this talk, we will explore early-stage research into how the concept of abstract actions captured using session types can prevent these bugs from arising late in the design process.  Our methodology aims to surface the interactions required to use a component (e.g., test, configuration, and power interfaces) early in the design process, without requiring the designer to know which specific IP block they will end up using (abstraction).  Session types are used to ensure that the designer provides the necessary resources to interface with a component, as well as ensuring that IP blocks implement a state machine that lowers abstract actions into concrete implementations. 
+-->
+
+# Avoiding Late Stage Design Bugs using Session Types to Specify Abstract Component Interfaces
+## Lenny Truong — 4/1/2021 — lenny@cs.stanford.edu
+
+---
+# Motivation
+- Important features are added late in the design process 
+  - Testing (BIST), power domains, redundancy
+- Two key classes of bugs related to these features
+    - Unexpected interactions (e.g. power domains and configuration state)
+    - Incorrect use of interfaces (e.g. integrating specific IP block)
+- Verification and debugging done with gate level simulations (slow)
+- **Challenge:** How can we prevent these bugs from arising late in the design process without breaking causality or requiring the designer to know all the details that will arise at the end of the design?
+
+---
+# Memory Example
+- Early in the design process, a simple SRAM model is used to represent memory
+- Later, it is replaced with a concrete SRAM that adds test and config interfaces
+  - Test interface used to find bad columns
+  - Config interface stores bad column information (must load before using)
+  - Also has power states (shutting off power means we have to reload config)
+- **Problem 1:** Integrating the concrete SRAM requires cross cutting design changes 
+  - e.g., global communication resource needed to drive the interfaces
+- **Problem 2:** The SRAM interface specification is incomplete
+  - Expensive simulation cycles used to discover desired configuration 
+
+---
+# Proposal
+Use the concept of *abstract actions* to surface the interactions required to use a component (e.g., test, configuration, power) early in the design process 
+- IP blocks presents an implementation of each action (performing a state change)
+- Requires the designer to consider the interacting issues early (e.g., performing the actions requires some global communication resource) without knowing the specific technology used for the components
+
+**Issue:** Defining a generic set of actions may not be complete
+- Power states, boot/restart, configuration, testing, ...???
+
+---
+# Methodology
+**Goal:** Capture the required interaction with a component using a type
+- Must go beyond structural type checking (i.e. ports are connected properly)
+  - A component may be correctly connected to the global communication resource, but the global controller may not perform the required actions
+
+**Approach:** Structure sequences of actions using a *session type* to ensure that components interact in a type-safe manner
+- A user of a component must provide logic to perform the required abstract actions 
+- A component must provide logic to lower abstract actions into concrete actions
+  - Concrete actions correspond to internal state changes
+
+
+---
+# A Brief Introduction to Session Types
+Adapted from
+- https://stanford-cs242.github.io/f18/lectures/07-2-session-types.html
+- https://munksgaard.me/papers/laumann-munksgaard-larsen.pdf
+
+---
+
+# Session Types Overview
+**Goal** - Structure sequences of reciprocal interactions in a type-safe manner
+
+- A *session* has an associated channel through which all interactions take place and the interactions are modelled by a type -- called a *session type*
+- The type system ensures that two processes only communicate via a session if their session types are compatible.
+  <!-- - *Note* - traditionally done statically to guarantee correctness of run-time behavior, but there is work on *dynamic* implementations (e.g. for Python) -->
+
+---
+
+# I2C Example
+![](./I2C_Basic_Address_and_Data_Frames.jpg)
+- Start condition (controller indicates transimission is about to start)
+- Address frame (controller chooses peripheral to talk to)
+- One or more data frames (8-bit messages)
+  - Data flows from controller to peripheral (write) or vice versa (read)
+- Stop condition
+
+---
+# Session Type Definitions
+$$
+\begin{align}
+\mathsf{SessionType}~\sigma ::= &\quad \mathsf{recv}~\tau;~\sigma &\quad \text{receive message type $\tau$} \\
+\mid &\quad \mathsf{send}~\tau;~\sigma &\quad \text{send message type $\tau$} \\
+\mid &\quad \mathsf{choose}~\{L_0\colon~(\sigma_{L_0})\mid L_1\colon~(\sigma_{L_1})\mid \ldots \}&\quad \text{choose sub-protocol} \\
+\mid &\quad \mathsf{offer}~\{L_0\colon~(\sigma_{L_0})\mid L_1\colon~(\sigma_{L_1})\mid \ldots \}&\quad \text{offer sub-protocol} \\
+\mid &\quad \varepsilon &\quad \text{end protocol}
+\end{align}
+$$
+
+# Simple I2C Session Type
+Only reads/writes one data frame
+$$
+\begin{align}
+\mathsf{I2CStop} &= \mathsf{send}~\texttt{STOP\_COND};~\varepsilon \\
+\mathsf{I2CWrite} &= \mathsf{send}~\texttt{Bits[8]};~\mathsf{I2CStop} \\
+\mathsf{I2CRead} &= \mathsf{recv}~\texttt{Bits[8]};~\mathsf{I2CStop} \\
+\mathsf{I2CCtrl} &= \mathsf{send}~\texttt{START\_COND};~\mathsf{send}~\texttt{Bits[7]}; \\
+&\quad ~\mathsf{choose}~\{\mathsf{read}\colon(\mathsf{I2CRead})~\mid\mathsf{write}~\colon(\mathsf{I2CWrite})\} \\
+\end{align}
+$$
+
+---
+
+# Recursion
+$$
+\begin{align}
+\mathsf{\color{red}I2CWrite} &= \mathsf{send}~\texttt{Bits[8]};~\mathsf{choose}~\{\mathsf{continue}\colon(\mathsf{\color{red}I2CWrite})~\mid\mathsf{end}~\colon(\varepsilon)\} \\
+\mathsf{\color{red}I2CRead} &= \mathsf{recv}~\texttt{Bits[8]};~\mathsf{choose}~\{\mathsf{continue}\colon(\mathsf{\color{red}I2CRead})~\mid\mathsf{end}~\colon(\varepsilon)\} \\
+\mathsf{I2CCtrl} &= \mathsf{send}~\texttt{START\_COND};~\mathsf{send}~\texttt{Bits[7]}; \\
+&\quad ~\mathsf{choose}~\{\mathsf{read}\colon(\mathsf{I2CRead})~\mid\mathsf{write}~\colon(\mathsf{I2CWrite})\} \\
+\end{align}
+$$
+*Note:* We no longer have an explicit $\mathsf{send}~\texttt{STOP\_COND}$, instead we choose "end"
+
+---
+# I2CPeriph
+$$
+\begin{align}
+\mathsf{I2CWrite} &= \mathsf{recv}~\texttt{Bits[8]};~\mathsf{offer}~\{\mathsf{continue}\colon(\mathsf{I2CWrite})~\mid\mathsf{end}~\colon(\varepsilon)\} \\
+\mathsf{I2CRead} &= \mathsf{send}~\texttt{Bits[8]};~\mathsf{offer}~\{\mathsf{continue}\colon(\mathsf{I2CRead})~\mid\mathsf{end}~\colon(\varepsilon)\} \\
+\mathsf{I2CPeriph} &= \mathsf{recv}~\texttt{START\_COND};~\mathsf{recv}~\texttt{Bits[7]}; \\
+&\quad ~\mathsf{choose}~\{\mathsf{read}\colon(\mathsf{I2CRead})~\mid\mathsf{write}~\colon(\mathsf{I2CWrite})\} \\
+\end{align}
+$$
+
+---
+
+# Duality
+$$
+\begin{align}
+\overline{\mathsf{send}~\tau;~\sigma} &= \mathsf{recv}~\tau;~\overline{\sigma}\\
+\overline{\mathsf{recv}~\tau;~\sigma} &= \mathsf{send}~\tau;~\overline{\sigma}\\
+\overline{\mathsf{choose}~\{L\colon~(\sigma_L)\mid R\colon~(\sigma_R)\}} &= \mathsf{offer}~\{L\colon~(\overline{\sigma_L})\mid R\colon~(\overline{\sigma_R})\}\\
+\overline{ \mathsf{offer}~\{L\colon~(\sigma_L)\mid R\colon~(\sigma_R)\}} &= \mathsf{choose}~\{L\colon~(\overline{\sigma_L})\mid R\colon~(\overline{\sigma_R})\}\\
+\overline{\varepsilon} &= \varepsilon
+\end{align}
+$$
+
+
+# I2C Dual
+$$
+\mathsf{I2CPeriph} = \overline{\mathsf{I2CCtrl}}
+$$
+
+---
+
+# How does the type checking work?
+
+---
+
+# Type Checking Primer: A Simple Language
+$$
+\begin{alignat}{3}
+\mathsf{Type}~\tau ::=\quad&~\mathsf{int} \quad& \text{integer} \\
+\mid\quad& \mathsf{bool} \quad& \text{boolean} \\
+\mid\quad& \mathsf{unit} \quad& \text{statement type} \\
+\\
+\mathsf{Expression}~e ::=\quad& x \quad& \text{variable} \\
+\mid\quad& n \quad& \text{integer} \\
+\mid\quad& b \quad& \text{boolean} \\
+\mid\quad& e_1 \land e_2 \quad& \text{logical and} \\
+\\
+\mathsf{Statement}~s ::=\quad& \mathsf{decl}~x~\tau \quad& \text{declare variable type} \\
+\mid\quad& x = e \quad& \text{assignment} \\
+\mid\quad& s_1;~s_2 \quad& \text{sequencing} \\
+\mid\quad& \varepsilon \quad& \text{terminator}
+\end{alignat}
+$$
+---
+
+# Type Checking Primer: Typing Rules
+$$
+\begin{align}
+\cfrac{}{\Gamma~\vdash~n:\mathsf{int}}\;\text{(T-Int)}
+\quad
+\cfrac{}{\Gamma~\vdash~b:\mathsf{bool}}\;\text{(T-Bool)}
+\quad
+\cfrac{x:\mathsf{\tau} \in \Gamma}{\Gamma~\vdash~x:\mathsf{\tau}}\;\text{(T-Var)} 
+\quad
+\cfrac{\Gamma~\vdash~x_1:\mathsf{\tau} \quad \Gamma~\vdash~x_2:\mathsf{\tau}}{\Gamma~\vdash~x_1 \land x_2:\mathsf{\tau}}\;\text{(T-And)}
+\\
+\cfrac{}{\Gamma~\vdash~\varepsilon:\mathsf{unit}}\;\text{(T-Epsilon)}
+\quad
+\cfrac{\Gamma,x:\tau~\vdash~s:\mathsf{unit}}{\Gamma~\vdash~\mathsf{decl}~x~\tau;~s:\mathsf{unit}}\;\text{(T-Decl)}
+\quad
+\cfrac{\Gamma~\vdash~x:\tau \quad \Gamma~\vdash~e:\tau \quad \Gamma~\vdash~s:\mathsf{unit}}{\Gamma~\vdash~x = e;~s:\mathsf{unit}}\;\text{(T-Assign)}
+\end{align}
+$$
+
+<br>
+
+$$
+\begin{alignat}{2}
+\mathsf{decl}~x~\mathsf{int}; & \quad \text{(T-Decl)} \\
+x = 2 \land 7; & \quad \text{(T-Int) and (T-And)} \\
+\mathsf{decl}~y~\mathsf{bool}; & \quad \text{(T-Decl)} \\
+\color{red}y = x \land \mathsf{False}; & \quad \text{\color{red}(Fails T-And)} \\
+\color{red}y = 2 \land 7; & \quad \text{\color{red}(Fails T-Assign)} \\
+\epsilon & \quad \text{(T-Epsilon)}
+
+\end{alignat}
+$$
+
+---
+# Session Type Rules
+**Basic Idea**: Modify the type of the channel in the context as an operation is performed
+<br>
+$$
+\cfrac{\Gamma~\vdash~c:\mathsf{send}~\tau; \sigma \qquad \Gamma~\vdash~x:\tau \qquad \Gamma, c:\sigma~\vdash~s:\mathsf{unit}}{\Gamma~\vdash~\mathsf{send}(c, x);~s:\mathsf{unit}}\;\text{(T-Send)}
+$$
+
+<br>
+
+$$
+\begin{alignat}{2}
+\mathsf{decl}~c~(\mathsf{send}~\mathsf{int};~\mathsf{recv}~\mathsf{int};~\varepsilon); & \quad \text{(T-Decl, }~c:\mathsf{recv}~\mathsf{int};~\mathsf{int}; \varepsilon ) \\
+\mathsf{send}(c, 2); & \quad \text{(T-Send, }~c:\mathsf{recv}~\mathsf{int}; \varepsilon ) \\
+\color{red}\mathsf{send}(c, 3); & \quad \text{\color{red}(Fails, expected recv not send)} \\
+\epsilon
+
+\end{alignat}
+$$
+
+---
+
+# Code Example
+```python
+I2CStop = Send[STOP_COND, Epsilon]
+I2CWrite = Send[BitVector[8], I2CStop]
+I2CRead = Receive[BitVector[8], I2CStop]
+I2CCtrl = Send[START_COND, Send[BitVector[7], Choose[("read", I2CRead), 
+                                                    ("write", I2CWrite)]]]
+
+def i2c_controller(c: Channel[I2CCtrl]):
+    c.send(START_COND)
+    c.send(0xDE)
+    c.choose("read")
+    result = c.receive()
+    c.send(STOP_COND)
+    c.close()
+```
+
+
+---
+# Adding More Complexity
+- Multiparty sessions (more than two entities communicating)
+  - Need for bus/NoC protocols
+  - Project global type (for all parties) into local type (for one party)
+  - Can prevent deadlocks 
+- Session delegation (one entity hands session over to another entity)
+  - One component performs part of the sequence, then finished by another
+
+---
+
+# Applying to a Simple Accumulation Register
+Input value is added to an internal register, output value is the current running sum
+- Abstract Actions: `PowerOn`, `Boot`
+  - If you don't call `PowerOn`, output is `X`
+  - If you don't call `Boot`, initial register value is random
+  - Calling `Boot` before `PowerOn` is undefined
+- Concrete Actions:
+  - Initial value is `X` (uninitialized flops)
+  - `PowerOn` input bit held high for one cycle sets register to random value
+  - `Boot` uses a configuration interface to set initial sum
+
+---
+# As a Session Type
+
+$$
+\begin{align}
+\mathsf{AccumRegAbstract} &= \mathsf{recv}~\texttt{POWER\_ON};~\mathsf{recv}~\texttt{BOOT};~\varepsilon
+\\
+\\
+\mathsf{HoldLow} &= \mathsf{recv}~0;~\mathsf{HoldLow}
+\\
+\mathsf{PowerOnConcrete} &= \mathsf{choose}~\{\mathsf{0}\colon(\mathsf{PowerOnConcrete})~\mid\mathsf{1}~\colon(\mathsf{HoldLow})\}
+\\
+\mathsf{BootConcrete} &= \mathsf{choose}~\{\mathsf{(x: \texttt{Bits[8]}, 0)}\colon(\mathsf{BootConcrete})~\mid\mathsf{(x: \texttt{Bits[8]}, 1)}~\colon(\mathsf{HoldLow})\}
+\\
+\end{align}
+$$
+<!-- \mathsf{PowerOn} &= \mathsf{recv}~\texttt{POWER\_ON} &\quad \text{Receive power on command}\\ -->
+<!-- \mathsf{Boot} &= \mathsf{recv}~\texttt{Bits[8]} &\quad \text{Receive initial sum}\\ -->
+<!-- \mathsf{Running} &= \mathsf{send}~\texttt{Bits[8]}; \mathsf{Running} &\quad \text{Continuously produce running sum}\\ -->
+<!-- \mathsf{AccumReg} &= \mathsf{PowerOn}; \mathsf{Boot}; \mathsf{Running} -->
+
+<br>
+
+- Using the register requires logic to send the `PowerOn` and `Boot` commands before being able to use the output sum
+- Register must provide an adapter to convert from the abstract type to the concrete type for each action
+
+---
+# Type Checking Hardware Behavior
+- Session types capture the sequential nature of communication
+- To apply to structural hardware, we'll need to infer the sequential behavior (FSM)
+- Writing a coroutine-style controller would allow standard type checking approaches
+
+---
+# Reg Coroutine Controller Example
+```python
+AccumRegAbstract = Receive[Command.POWER_ON,
+                           Receive[Command.BOOT, Epsilon]]
+HoldLow = Receive[0, HoldLow]
+PowerOnConcrete = Rec("PowerOnConcrete", Choose[(0, "PowerOnConcrete"),
+                                                (1, HoldLow)])
+x = TypeVar[Bits[8]]
+BootConcrete = Rec("BootConcrete", Choose[((x, 0), "BootConcrete"),
+                                          ((x, 1), HoldLow)])
+
+class RegController(Controller):
+    def __call__(self,
+                 abstract: Channel[AccumRegAbstract],
+                 power_on: Channel[PowerOnConcrete],
+                 boot: Channel[BootConcrete]):
+
+        def wait_for_next_command():
+            while ~abstract.receive():
+                yield power_on.send(0), boot.send(0)
+
+        yield from wait_for_next_command()
+        yield power_on.send(1), boot.send(0)
+        yield from wait_for_next_command()
+        yield power_on.send(0), boot.send(1)
+        while True:
+            yield power_on.send(0), boot.send(0)
+```
+---
+# Limitations
+- Session types ensure that their is a correct state machine that produces or consumes a required actions sequence
+- They ensure that the there is a conversion from abstract and concrete actions
+  - Does not ensure that the conversion is correct
+- They do not ensure that the behavior of the component is correct after a concrete action (i.e. the correct state change was performed)
+  - Could be used to generate assumptions for other verification methods
+
+---
+# Conclusion
+**Goal:** Surface the interactions required to use a component (e.g., test, configuration, and power interfaces) early in the design process, without requiring the designer to know which specific IP block they will end up using (abstraction)
+
+**Methodology:** Specify component interfaces as a sequence of *abstract actions*
+Sequences are described as *session types* to ensure that
+- Designers provide resources to produce the action sequences 
+- IP blocks provide logic to lower actions into concrete state changes
